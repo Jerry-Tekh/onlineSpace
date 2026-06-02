@@ -35,6 +35,8 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  margin: 0 auto; /* center nav between left and right controls */
+  flex-wrap: wrap;
 }
 
 .notActive,
@@ -47,6 +49,7 @@
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
   color: var(--paragraph);
+  width: fit-content;
   letter-spacing: 0.01em;
 }
 

@@ -30,8 +30,6 @@ export default function Header({ theme, toggleTheme }) {
               {item.label}
             </NavLink>
           ))}
-        </nav>
-
         <div className={styles.controls}>
           <button
             type="button"
@@ -43,6 +41,8 @@ export default function Header({ theme, toggleTheme }) {
             <span>{theme === "light" ? "Dark" : "Light"}</span>
           </button>
         </div>
+        </nav>
+
       </div>
     </header>
   );
