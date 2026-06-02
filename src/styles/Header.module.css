@@ -34,9 +34,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 0.6rem; /* a bit more breathing room between links now */
-  margin-left: 0.6rem; /* offset since logo was removed */
-  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .notActive,
@@ -44,7 +42,7 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.5rem 1rem; /* slightly more horizontal padding */
+  padding: 0.5rem 0.9rem;
   border-radius: 0;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
@@ -101,10 +99,6 @@
   .themeToggle span {
     display: none;
   }
-  .nav {
-    gap: 0.5rem;
-    margin-left: 0.4rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -118,7 +112,8 @@
     padding: 0 0.5rem;
   }
   .notActive,
-  .active {
-    padding: 0.45rem 0.5rem;
-  }
+.active {
+  padding: 0.5rem 0.25rem;
+ 
+}
 }
