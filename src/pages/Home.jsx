@@ -72,13 +72,13 @@ export default function Home() {
           animate="visible"
           variants={slideLeft}
         >
-          <div className={styles.profileImageWrap}>
+         {/* <div className={styles.profileImageWrap}>
             <img
               src={personalInfo.image}
               alt={personalInfo.name}
               className={styles.profileImage}
-            />
-          </div>
+            />*
+          </div>*/}
 
           <span className={styles.profileTag}>
             <span className={styles.tagDot} />
