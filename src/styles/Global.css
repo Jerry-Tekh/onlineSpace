@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+:root {
+  --primary: #ff4c29;
+  --primary-deep: #e03318;
+  --primary-glow: rgba(255, 76, 41, 0.18);
+  --primary-soft: rgba(255, 76, 41, 0.08);
+  --bg: #ffffff;
+  --surface: #fafaf9;
+  --surface-2: #f4f3f0;
+  --surface-3: #eeedea;
+  --text: #0d0d0d;
+  --text-2: #3a3a3a;
+  --paragraph: #5c5c5c;
+  --muted: #909090;
+  --highlight: #009688;
+  --highlight-2: #00bfa5;
+  --highlight-soft: rgba(0, 150, 136, 0.1);
+  --active: #eded45;
+  --active-deep: #d4d400;
+  --border: rgba(13, 13, 13, 0.08);
+  --border-strong: rgba(13, 13, 13, 0.14);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow: 0 8px 32px rgba(0,0,0,0.08);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.1);
+  --radius-xl: 0;
+  --radius-lg: 0;
+  --radius-md: 0;
+  --radius-sm: 0;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="dark"] {
+  --bg: #080c0b;
+  --surface: #0e1412;
+  --surface-2: #131c1a;
+  --surface-3: #182422;
+  --text: #f0f5f3;
+  --text-2: #c8d4d1;
+  --paragraph: #8fa49f;
+  --muted: #607570;
+  --highlight: #47d6bd;
+  --highlight-2: #26c4aa;
+  --highlight-soft: rgba(71, 214, 189, 0.1);
+  --active: #f5e84a;
+  --active-deep: #e0d400;
+  --border: rgba(240, 245, 243, 0.07);
+  --border-strong: rgba(240, 245, 243, 0.12);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.24);
+  --shadow: 0 8px 32px rgba(0,0,0,0.3);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Subtle noise grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+main { width: 100%; padding-top: 80px; }
+section { width: 100%; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, textarea { font: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 0; }
+
+/* Selection */
+::selection { background: var(--primary); color: #fff; }
